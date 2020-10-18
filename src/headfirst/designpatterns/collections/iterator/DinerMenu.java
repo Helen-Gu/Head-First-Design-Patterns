@@ -1,5 +1,7 @@
 package headfirst.designpatterns.collections.iterator;
 
+import java.util.Iterator;
+
 public class DinerMenu implements Menu {
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
@@ -29,8 +31,7 @@ public class DinerMenu implements Menu {
 		return menuItems;
 	}
 
-	@Override
-	public Iterator createIterator() {
+	public Iterator<MenuItem> createIterator() {
 		return new DinerMenuIterator(menuItems);
 	}
 
@@ -38,4 +39,5 @@ public class DinerMenu implements Menu {
 		return "Diner Menu";
 	}
 	// other menu methods here
+
 }

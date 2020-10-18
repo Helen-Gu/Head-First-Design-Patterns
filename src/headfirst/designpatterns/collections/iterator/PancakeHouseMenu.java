@@ -1,6 +1,7 @@
 package headfirst.designpatterns.collections.iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class PancakeHouseMenu implements Menu {
 	ArrayList<MenuItem> menuItems;
@@ -22,9 +23,8 @@ public class PancakeHouseMenu implements Menu {
 		return menuItems;
 	}
 
-	@Override
-	public Iterator createIterator() {
-		return new PancakeHouseMenuIterator(menuItems);
+	public Iterator<MenuItem> createIterator() {
+		return menuItems.iterator();
 	}
 
 	public String toString() {
