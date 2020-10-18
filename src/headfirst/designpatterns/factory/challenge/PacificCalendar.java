@@ -8,6 +8,7 @@ public class PacificCalendar extends Calendar {
 		// make a calendar for the pacific zone
 		// ...
 	}
+
 	public void createCalendar(List<String> appointments) {
 		// make calendar from appointments
 		System.out.println("Making the calendar");

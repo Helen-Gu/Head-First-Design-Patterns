@@ -5,14 +5,11 @@ public class ZoneFactory {
 		Zone zone = null;
 		if (zoneId == "US/Pacific") {
 			zone = new ZonePacific();
-		}
-		else if (zoneId == "US/Mountain") {
+		} else if (zoneId == "US/Mountain") {
 			zone = new ZoneMountain();
-		}
-		else if (zoneId == "US/Central") {
+		} else if (zoneId == "US/Central") {
 			zone = new ZoneCentral();
-		}
-		else if (zoneId == "US/Eastern") {
+		} else if (zoneId == "US/Eastern") {
 			zone = new ZoneEastern();
 		}
 		return zone;

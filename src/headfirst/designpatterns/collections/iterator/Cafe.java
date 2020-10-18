@@ -7,23 +7,27 @@ public class Cafe {
 	public static void main(String args[]) {
 		PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
 		DinerMenu dinerMenu = new DinerMenu();
-		
+
 		// with no iterators
 		System.out.println("\nMENU\n----\nBREAKFAST");
-		ArrayList<String> breakfastItems = pancakeHouseMenu.getMenuItems();
+		ArrayList<MenuItem> breakfastItems = pancakeHouseMenu.getMenuItems();
 		for (int i = 0; i < breakfastItems.size(); i++) {
-			String menuItem = (String)breakfastItems.get(i);
-			System.out.println(menuItem);
+			MenuItem menuItem = breakfastItems.get(i);
+			System.out.println(menuItem.getName() + " ");
+			System.out.println(menuItem.getPrice() + " ");
+			System.out.println(menuItem.getDescription() + " ");
 		}
 
 		System.out.println("\nLUNCH");
-		String[] lunchItems = dinerMenu.getMenuItems();
+		MenuItem[] lunchItems = dinerMenu.getMenuItems();
 
 		for (int i = 0; i < lunchItems.length; i++) {
-			String menuItem = lunchItems[i];
-			System.out.println(menuItem);
+			MenuItem menuItem = lunchItems[i];
+			System.out.println(menuItem.getName() + " ");
+			System.out.println(menuItem.getPrice() + " ");
+			System.out.println(menuItem.getDescription() + " ");
 		}
-		
+
 		// with iterators
 		Iterator pancakeIterator = pancakeHouseMenu.createIterator();
 		Iterator dinerIterator = dinerMenu.createIterator();
@@ -31,13 +35,15 @@ public class Cafe {
 		System.out.println("\nMENU (with iterators)\n----\nBREAKFAST");
 		printMenu(pancakeIterator);
 		System.out.println("\nLUNCH");
-		printMenu(dinerIterator); 
+		printMenu(dinerIterator);
 	}
- 
+
 	private static void printMenu(Iterator iterator) {
 		while (iterator.hasNext()) {
-			String menuItem = (String)iterator.next();
-			System.out.println(menuItem);
+			MenuItem menuItem = (MenuItem) iterator.next();
+			System.out.println(menuItem.getName() + " ");
+			System.out.println(menuItem.getPrice() + " ");
+			System.out.println(menuItem.getDescription() + " ");
 
 		}
 	}

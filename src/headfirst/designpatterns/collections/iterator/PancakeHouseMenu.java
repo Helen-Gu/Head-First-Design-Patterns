@@ -3,30 +3,30 @@ package headfirst.designpatterns.collections.iterator;
 import java.util.ArrayList;
 
 public class PancakeHouseMenu implements Menu {
-	ArrayList<String> menuItems;
- 
+	ArrayList<MenuItem> menuItems;
+
 	public PancakeHouseMenu() {
-		menuItems = new ArrayList<String>();
-    
-		addItem("K&B's Pancake Breakfast");
-		addItem("Regular Pancake Breakfast");
-		addItem("Blueberry Pancakes");
-		addItem("Waffles");
+		menuItems = new ArrayList<MenuItem>();
+
+		addItem("K&B's Pancake Breakfast", "Pancake with scrambled eggs, and toast", true, 2.99);
+		addItem("Regular Pancake Breakfast", "Pancakes with fried eggs, sausage", false, 2.99);
+		addItem("Blueberry Pancakes", "Pancakes made with fresh blueberries", true, 3.49);
+		addItem("Waffles", "Waffles, with your choice of blueberries or strawberries", true, 3.59);
 	}
 
-	public void addItem(String name)
-	{
-		menuItems.add(name);
+	public void addItem(String name, String description, boolean vegetarian, double price) {
+		menuItems.add(new MenuItem(name, description, vegetarian, price));
 	}
- 
-	public ArrayList<String> getMenuItems() {
+
+	public ArrayList<MenuItem> getMenuItems() {
 		return menuItems;
 	}
-  
+
+	@Override
 	public Iterator createIterator() {
 		return new PancakeHouseMenuIterator(menuItems);
 	}
-  
+
 	public String toString() {
 		return "Pancake House Menu";
 	}
