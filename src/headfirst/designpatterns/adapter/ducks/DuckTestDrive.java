@@ -20,7 +20,7 @@ public class DuckTestDrive {
 
 		System.out.println("\nThe TurkeyAdapter says...");
 		testDuck(turkeyAdapter);
-		
+
 		// Challenge
 		Drone drone = new SuperDrone();
 		Duck droneAdapter = new DroneAdapter(drone);

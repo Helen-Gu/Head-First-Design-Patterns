@@ -16,7 +16,7 @@ public class TheaterLights {
 	}
 
 	public void dim(int level) {
-		System.out.println(description + " dimming to " + level  + "%");
+		System.out.println(description + " dimming to " + level + "%");
 	}
 
 	public String toString() {

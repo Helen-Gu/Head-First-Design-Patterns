@@ -3,15 +3,15 @@ package headfirst.designpatterns.templatemethod.barista;
 import java.io.*;
 
 public class CoffeeWithHook extends CaffeineBeverageWithHook {
- 
+
 	public void brew() {
 		System.out.println("Dripping Coffee through filter");
 	}
- 
+
 	public void addCondiments() {
 		System.out.println("Adding Sugar and Milk");
 	}
- 
+
 	public boolean customerWantsCondiments() {
 
 		String answer = getUserInput();
@@ -22,7 +22,7 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
 			return false;
 		}
 	}
- 
+
 	private String getUserInput() {
 		String answer = null;
 

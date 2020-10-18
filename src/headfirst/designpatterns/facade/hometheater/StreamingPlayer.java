@@ -5,20 +5,20 @@ public class StreamingPlayer {
 	int currentChapter;
 	Amplifier amplifier;
 	String movie;
-	
+
 	public StreamingPlayer(String description, Amplifier amplifier) {
 		this.description = description;
 		this.amplifier = amplifier;
 	}
- 
+
 	public void on() {
 		System.out.println(description + " on");
 	}
- 
+
 	public void off() {
 		System.out.println(description + " off");
 	}
- 
+
 	public void play(String movie) {
 		this.movie = movie;
 		currentChapter = 0;
@@ -38,7 +38,7 @@ public class StreamingPlayer {
 		currentChapter = 0;
 		System.out.println(description + " stopped \"" + movie + "\"");
 	}
- 
+
 	public void pause() {
 		System.out.println(description + " paused \"" + movie + "\"");
 	}
@@ -46,11 +46,11 @@ public class StreamingPlayer {
 	public void setTwoChannelAudio() {
 		System.out.println(description + " set two channel audio");
 	}
- 
+
 	public void setSurroundAudio() {
 		System.out.println(description + " set surround audio");
 	}
- 
+
 	public String toString() {
 		return description;
 	}
