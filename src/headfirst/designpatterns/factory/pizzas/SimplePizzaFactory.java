@@ -2,7 +2,7 @@ package headfirst.designpatterns.factory.pizzas;
 
 public class SimplePizzaFactory {
 
-	public Pizza createPizza(String type) {
+	public static Pizza createPizza(String type) {
 		Pizza pizza = null;
 
 		if (type.equals("cheese")) {

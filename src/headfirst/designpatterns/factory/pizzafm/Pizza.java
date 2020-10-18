@@ -7,7 +7,7 @@ public abstract class Pizza {
 	String dough;
 	String sauce;
 	ArrayList<String> toppings = new ArrayList<String>();
- 
+
 	void prepare() {
 		System.out.println("Prepare " + name);
 		System.out.println("Tossing dough...");
@@ -17,19 +17,19 @@ public abstract class Pizza {
 			System.out.println("   " + topping);
 		}
 	}
-  
+
 	void bake() {
 		System.out.println("Bake for 25 minutes at 350");
 	}
- 
+
 	void cut() {
 		System.out.println("Cut the pizza into diagonal slices");
 	}
-  
+
 	void box() {
 		System.out.println("Place pizza in official PizzaStore box");
 	}
- 
+
 	public String getName() {
 		return name;
 	}
@@ -45,6 +45,3 @@ public abstract class Pizza {
 		return display.toString();
 	}
 }
-
- 
- 

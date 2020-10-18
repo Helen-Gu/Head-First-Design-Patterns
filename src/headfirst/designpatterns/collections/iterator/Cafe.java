@@ -7,7 +7,7 @@ public class Cafe {
 	public static void main(String args[]) {
 		Menu pancakeHouseMenu = new PancakeHouseMenu();
 		Menu dinerMenu = new DinerMenu();
-
+		Menu cafeMenu = new CafeMenu();
 		// // with no iterators
 		// System.out.println("\nMENU\n----\nBREAKFAST");
 		// ArrayList<MenuItem> breakfastItems = pancakeHouseMenu.getMenuItems();
@@ -37,7 +37,7 @@ public class Cafe {
 		// System.out.println("\nLUNCH");
 		// printMenu(dinerIterator);
 
-		Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu);
+		Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu, cafeMenu);
 		waitress.printMenu();
 	}
 
