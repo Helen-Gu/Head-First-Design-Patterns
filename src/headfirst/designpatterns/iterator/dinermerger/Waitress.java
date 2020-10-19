@@ -3,12 +3,12 @@ package headfirst.designpatterns.iterator.dinermerger;
 public class Waitress {
 	Menu pancakeHouseMenu;
 	Menu dinerMenu;
- 
+
 	public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
 		this.pancakeHouseMenu = pancakeHouseMenu;
 		this.dinerMenu = dinerMenu;
 	}
- 
+
 	public void printMenu() {
 		Iterator pancakeIterator = pancakeHouseMenu.createIterator();
 		Iterator dinerIterator = dinerMenu.createIterator();
@@ -19,7 +19,7 @@ public class Waitress {
 		printMenu(dinerIterator);
 
 	}
- 
+
 	private void printMenu(Iterator iterator) {
 		while (iterator.hasNext()) {
 			MenuItem menuItem = iterator.next();
@@ -28,12 +28,12 @@ public class Waitress {
 			System.out.println(menuItem.getDescription());
 		}
 	}
- 
+
 	public void printVegetarianMenu() {
 		printVegetarianMenu(pancakeHouseMenu.createIterator());
 		printVegetarianMenu(dinerMenu.createIterator());
 	}
- 
+
 	public boolean isItemVegetarian(String name) {
 		Iterator breakfastIterator = pancakeHouseMenu.createIterator();
 		if (isVegetarian(name, breakfastIterator)) {
@@ -45,7 +45,6 @@ public class Waitress {
 		}
 		return false;
 	}
-
 
 	private void printVegetarianMenu(Iterator iterator) {
 		while (iterator.hasNext()) {
